@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+   <head>
+       <link rel="stylesheet" href="searchner.css">
+       <script type="text/javascript" src="angular.min.js"></script>
+       <script type="text/javascript" src="searchner.js"></script>
+       <title>seachaner</title>
+   </head>
+   <body ng-controller ="myCtrl">
+       <div class="main-container">
+           <div class="list-container">
+               <div class="pooja"  ng-repeat="line in longlists">
+                   {{line}}
+               </div>
+           </div>
+           <div class="search-container">
+               <div class="input-container">
+               SEARCHNER: <input type="search" name="SEARCHANER" ng-model="linesletter" ng-change="newlist(linesletter)">
+               </div>
+               <div class ="result-container">
+                   <div class="output-container" ng-repeat ="result in longlists1">
+                       {{result}}
+                   </div>
+              </div>
+           </div>   
+           
+       </div>
+       
+     
+   </body>
+</html>
